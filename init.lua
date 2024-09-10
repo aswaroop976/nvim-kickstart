@@ -168,7 +168,7 @@ vim.keymap.set('i', 'kj', '<Esc>')
 vim.keymap.set('v', '<leader>y', '"+y')
 
 -- Oil
-vim.keymap.set('n', '-', '<Cmd>Oil<CR>', { desc = 'open parent directory' })
+vim.keymap.set('n', '<leader>.', '<Cmd>Oil<CR>', { desc = 'open parent directory' })
 -- Undotree
 vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
 -- Diagnostic keymaps
