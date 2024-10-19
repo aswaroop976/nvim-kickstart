@@ -154,6 +154,9 @@ vim.opt.inccommand = 'split'
 -- Show which line your cursor is on
 vim.opt.cursorline = true
 
+-- Column 80 marker
+vim.opt.colorcolumn = '80'
+
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
@@ -168,9 +171,9 @@ vim.keymap.set('i', 'kj', '<Esc>')
 vim.keymap.set('v', '<leader>y', '"+y')
 
 -- Oil
-vim.keymap.set('n', '<leader>.', '<Cmd>Oil<CR>', { desc = 'open parent directory' })
+vim.keymap.set('n', '-', '<Cmd>Oil<CR>', { desc = 'open parent directory' })
 -- Undotree
-vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = 'open undo tree' })
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -584,6 +587,7 @@ require('lazy').setup({
         -- gopls = {},
         pyright = {},
         rust_analyzer = {},
+        -- html_lsp = {},
         -- jdtls = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
